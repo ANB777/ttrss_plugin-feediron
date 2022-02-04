@@ -58,7 +58,7 @@ class Feediron extends Plugin implements IHandler
   }
 
   // Allow only in active sessions
-  function before($method): bool
+  function before(string $method): bool
   {
     if ($_SESSION["uid"])
     {
