@@ -51,7 +51,7 @@ class Feediron extends Plugin implements IHandler
   }
 
   // Required API, Django...
-  function csrf_ignore($method): bool
+  function csrf_ignore(string $method): bool
   {
     $csrf_ignored = array("index", "edit");
     return array_search($method, $csrf_ignored) !== false;
